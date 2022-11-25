@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./styles/styles.css" />
 
     <title>Frontend Mentor | Advice generator app</title>
 
@@ -18,24 +19,47 @@
     <style>
       .attribution {
         font-size: 11px;
+        color: white;
         text-align: center;
+        position: absolute;
+        bottom: 0%;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
     </style>
   </head>
-  <body>
-    <div></div>
-    Advice #<!-- Advice ID goes here -->
-
-    "<!-- Advice text goes here -->"
-
+  <body onload="loadData()">
+    <div class="advice-container">
+      <div class="advice-title__container">
+        <h2>
+          Advice
+          <h2 id="advice-title__number"></h2>
+        </h2>
+      </div>
+      <div class="advice-message__container">
+        <p id="advice__message"></p>
+      </div>
+      <img
+        class="advice__divider advice__divider-desktop"
+        src="/images/pattern-divider-desktop.svg"
+        alt="divider"
+      />
+      <img
+        class="advice__divider advice__divider-mobile"
+        src="/images/pattern-divider-mobile.svg"
+        alt="divider"
+      />
+      <button type="submit" onclick="loadData()" class="advice__icon">
+        <img id="icon-dice" src="/images/icon-dice.svg" alt="icon-dice" />
+      </button>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Spencer Rafada</a>.
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
